@@ -1,5 +1,135 @@
 {
   "version": 1,
-  "active_task": null,
-  "checkpoints": []
+  "active_task": {
+    "task_id": "probe-build",
+    "last_phase": "phase 4",
+    "active_phase": 5,
+    "status": "completed",
+    "updated_at": 1795089781.155752,
+    "owner": "opencode:ses_e0c7f4a9bffe4LjyiOn1Y2qoDT",
+    "lease_until": 1795096981.155752,
+    "started_by": "opencode:ses_e0c7f4a9bffe4LjyiOn1Y2qoDT",
+    "continuations": [],
+    "workspaces": [
+      {
+        "name": "probe",
+        "path": "projects/probe"
+      }
+    ],
+    "completed_at": 1795089799.6586902,
+    "completed_head": "6452e06ce58325651acd2a3d3206d0fcb3db7c5f",
+    "completed_tree": "b3e491b3e1921d1485b8641f11596d09f6e10abf"
+  },
+  "checkpoints": [
+    {
+      "task_id": "probe-build",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/5] Scaffold the probe project: README, test command, .gitignore, project memory.",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795088827.0173004,
+      "timestamp_str": "2026-11-19 14:47:07",
+      "agent": "opencode:ses_e0c7f4a9bffe4LjyiOn1Y2qoDT",
+      "impact_assessment": {
+        "why": "New AIKit-managed project to test this agent's capabilities end to end with a falsifiable, inspectable battery of environment checks and verifiable reports.",
+        "benefits": "Proves the environment's tooling works (filesystem, shell, git, imports, timing, web) with measured evidence instead of assumptions; gives a reusable capability self-test for any AIKit-integrated agent.",
+        "risks": "contract: probe exits non-zero when any check fails so the gate stays honest; dependency: none beyond the standard library, which the imports scan proves; concurrency: none, a battery run is sequential; state: reports/ is gitignored, the fs check writes and deletes reports/.fs-roundtrip.txt, the web fetch is read-only.",
+        "mitigation": "Every check is falsifiable (read-back, exit code, digest, budget verified); the web check is opt-in so the default run stays fast and offline-safe."
+      },
+      "plan_digest": "789d17dfb70f4d04b760b2bd5a0aa0ed9bf066b21095f1de1ef850c923026582",
+      "workspaces": [
+        {
+          "name": "probe",
+          "path": "projects/probe"
+        }
+      ]
+    },
+    {
+      "task_id": "probe-build",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[2/5] Add probe.py: the CLI with the default battery (fs, shell, git, imports), the deep lane (timing, web) and the JSON report writer.",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795088955.388801,
+      "timestamp_str": "2026-11-19 14:49:15",
+      "agent": "opencode:ses_e0c7f4a9bffe4LjyiOn1Y2qoDT",
+      "workspaces": [
+        {
+          "name": "probe",
+          "path": "projects/probe"
+        }
+      ]
+    },
+    {
+      "task_id": "probe-build",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[3/5] Add unit and CLI integration tests for the battery (11 tests, all green).",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795089004.0588496,
+      "timestamp_str": "2026-11-19 14:50:04",
+      "agent": "opencode:ses_e0c7f4a9bffe4LjyiOn1Y2qoDT",
+      "workspaces": [
+        {
+          "name": "probe",
+          "path": "projects/probe"
+        }
+      ]
+    },
+    {
+      "task_id": "probe-build",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[4/5] Gates pass: aikit check probe 5/5 (hygiene, guidelines, secrets, compat, test); ADR-001 recorded; README tree complete.",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795089608.4253364,
+      "timestamp_str": "2026-11-19 15:00:08",
+      "agent": "opencode:ses_e0c7f4a9bffe4LjyiOn1Y2qoDT",
+      "workspaces": [
+        {
+          "name": "probe",
+          "path": "projects/probe"
+        }
+      ]
+    },
+    {
+      "task_id": "probe-build",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "Gates passed: aikit check probe 5/5; brand candidates and media register committed.",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795089781.155752,
+      "timestamp_str": "2026-11-19 15:03:01",
+      "agent": "opencode:ses_e0c7f4a9bffe4LjyiOn1Y2qoDT",
+      "checklists": "passed",
+      "workspaces": [
+        {
+          "name": "probe",
+          "path": "projects/probe"
+        }
+      ]
+    },
+    {
+      "task_id": "probe-build",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'probe-build' completed successfully.",
+      "status": "completed",
+      "timestamp": 1795089799.7377222,
+      "timestamp_str": "2026-11-19 15:03:19",
+      "agent": "opencode:ses_e0c7f4a9bffe4LjyiOn1Y2qoDT",
+      "head": "6452e06ce58325651acd2a3d3206d0fcb3db7c5f",
+      "delivery": {
+        "roots": [
+          "."
+        ],
+        "forced": false
+      }
+    }
+  ]
 }
