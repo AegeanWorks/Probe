@@ -28,5 +28,11 @@
     "probe.py"
   ],
   "ui_checked_at": "2026-11-19",
-  "ui_source": "detected"
+  "ui_source": "detected",
+  "archived": true,
+  "archived_at": "2026-11-19",
+  "archive_reason": "Archived after delivery: the project was published as AegeanWorks/Probe and verified (reforge run-1, gates 5/5, publish done).",
+  "archive_repo": "AegeanWorks/Probe",
+  "archive_description": "[ARCHIVED] Local-first capability probe: a falsifiable CLI that runs an inspectable battery of environment checks - filesystem round-trip, shell execution, git state, imports and timing - and writes a verifiable JSON report of what was actually measured.",
+  "archive_origin": "projects/probe"
 }

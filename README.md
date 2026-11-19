@@ -8,6 +8,8 @@
 
 Local-first capability probe: a falsifiable CLI that runs an inspectable battery of environment checks - filesystem round-trip, shell execution, git state, imports and timing - and writes a verifiable JSON report of what was actually measured.
 
+> **Archived**: Archived after delivery: the project was published as AegeanWorks/Probe and verified (reforge run-1, gates 5/5, publish done). (archived 2026-11-19). This project is read-only; its GitHub repository is archived.
+
 ## ⚡ 30-Second Cold-Start Quick Reference
 
 - **Runtime Prerequisites**: Python 3.10+ (standard library only); git on PATH (the `git` check needs it)
