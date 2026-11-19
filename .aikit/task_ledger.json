@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "probe-build",
+    "task_id": "probe-build-2",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1795089781.155752,
+    "updated_at": 1795090000.7204423,
     "owner": "opencode:ses_e0c7f4a9bffe4LjyiOn1Y2qoDT",
-    "lease_until": 1795096981.155752,
+    "lease_until": 1795097200.7204423,
     "started_by": "opencode:ses_e0c7f4a9bffe4LjyiOn1Y2qoDT",
     "continuations": [],
     "workspaces": [
@@ -16,9 +16,9 @@
         "path": "projects/probe"
       }
     ],
-    "completed_at": 1795089799.6586902,
-    "completed_head": "6452e06ce58325651acd2a3d3206d0fcb3db7c5f",
-    "completed_tree": "b3e491b3e1921d1485b8641f11596d09f6e10abf"
+    "completed_at": 1795090006.7358608,
+    "completed_head": "b2f23b11d5d4f2097f5054eb615c5681c0106316",
+    "completed_tree": "36d11b972114d7a35d2081b8d74bc9a8892efd4d"
   },
   "checkpoints": [
     {
@@ -124,6 +124,65 @@
       "timestamp_str": "2026-11-19 15:03:19",
       "agent": "opencode:ses_e0c7f4a9bffe4LjyiOn1Y2qoDT",
       "head": "6452e06ce58325651acd2a3d3206d0fcb3db7c5f",
+      "delivery": {
+        "roots": [
+          "."
+        ],
+        "forced": false
+      }
+    },
+    {
+      "task_id": "probe-build-2",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/1] Close the delivery-ready state: the aikit-fix repairs (codebase map, README assets entry, ui identifier, commit b2f23b1) are in place; no further probe work is claimed.",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795089993.940041,
+      "timestamp_str": "2026-11-19 15:06:33",
+      "agent": "opencode:ses_e0c7f4a9bffe4LjyiOn1Y2qoDT",
+      "impact_assessment": {
+        "why": "The aikit-fix repairs landed as commit b2f23b1 after probe-build completed, which makes the completed task stale (ADR-419: later non-bookkeeping commits after a completed task fail --strict). Opening the next task is the ledger's sanctioned remedy for a stale completed task (aikit_cli.py: 'open the next task to clear it').",
+        "benefits": "Restores delivery-readiness: the completed probe-build is fresh again and \u0007ikit check probe --strict passes; the follow-up records the closure with phase-4 checklist evidence.",
+        "risks": "contract: no new code or test work is claimed; the task closes with zero commits of its own. dependency: none. concurrency: none. state: the ledger gains a second completed task; the probe tree stays at b2f23b1.",
+        "mitigation": "No commits after the phase-4 checkpoint; complete immediately after recording it; no further non-bookkeeping work without a new task."
+      },
+      "plan_digest": "7508521aa09ad9308afba3e2b35c17417732608725454f8e488cd3d46ef30ad4",
+      "workspaces": [
+        {
+          "name": "probe",
+          "path": "projects/probe"
+        }
+      ]
+    },
+    {
+      "task_id": "probe-build-2",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "Closed the delivery-ready state with no new work: the completed probe-build task is fresh, and \u0007ikit check probe --strict passes with this task open.",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795090000.7204423,
+      "timestamp_str": "2026-11-19 15:06:40",
+      "agent": "opencode:ses_e0c7f4a9bffe4LjyiOn1Y2qoDT",
+      "checklists": "passed",
+      "workspaces": [
+        {
+          "name": "probe",
+          "path": "projects/probe"
+        }
+      ]
+    },
+    {
+      "task_id": "probe-build-2",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'probe-build-2' completed successfully.",
+      "status": "completed",
+      "timestamp": 1795090006.814385,
+      "timestamp_str": "2026-11-19 15:06:46",
+      "agent": "opencode:ses_e0c7f4a9bffe4LjyiOn1Y2qoDT",
+      "head": "b2f23b11d5d4f2097f5054eb615c5681c0106316",
       "delivery": {
         "roots": [
           "."
