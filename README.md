@@ -35,6 +35,7 @@ probe/                        <- root
 ├── demo.py                   <- AI-compat scripted drive: WORLD-DELTA lines (ADR-315)
 ├── inventory.py              <- AI-compat inventory: kind|name|locator lines (ADR-315)
 ├── tests/
+│   ├── __init__.py           <- the tests package marker for discovery
 │   ├── test_probe.py         <- unit tests for the pure functions and checks
 │   └── test_probe_cli.py     <- integ tests: the CLI runs the battery end-to-end
 └── .aikit/                   <- this project's memory: record, ledger, decisions
