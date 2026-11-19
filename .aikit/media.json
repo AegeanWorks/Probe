@@ -15,17 +15,31 @@
   "assets": {
     "logo": {
       "path": "assets/logo.svg",
-      "status": "pending_review",
+      "status": "approved",
       "commit": "",
       "generated_at": "2026-11-19T14:24:50",
-      "review": null
+      "review": {
+        "status": "approved",
+        "reviewer": "agent:opencode:ses_e0c7f4a9bffe4LjyiOn1Y2qoDT",
+        "method": "structural",
+        "notes": "Structural review of assets/logo.svg: 512x512 rounded-rect stack mark on the palette (dark #12070d/#301213, pink #f566a4, light #F8FAFC), AegeanWorks triangle chevron plus the PR monogram and AEGEANWORKS label, consistent with the local-fallback rendering used by aikit new (ADR-239/241/243).",
+        "score": null,
+        "reviewed_at": "2026-11-19T21:17:02"
+      }
     },
     "social_preview": {
       "path": "assets/social-preview.svg",
-      "status": "pending_review",
+      "status": "approved",
       "commit": "",
       "generated_at": "2026-11-19T14:24:50",
-      "review": null
+      "review": {
+        "status": "approved",
+        "reviewer": "agent:opencode:ses_e0c7f4a9bffe4LjyiOn1Y2qoDT",
+        "method": "structural",
+        "notes": "Structural review of assets/social-preview.svg: 1280x640, carries the probe description in its body text and the AEGEANWORKS - LIBRARY placement line; gradients, grid and tagline consistent with the palette; approved for publish.",
+        "score": null,
+        "reviewed_at": "2026-11-19T21:17:13"
+      }
     }
   },
   "screenshots": []
