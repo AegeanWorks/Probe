@@ -6,10 +6,10 @@ Local-first capability probe: a falsifiable CLI that runs an inspectable battery
 
 ## ⚡ 30-Second Cold-Start Quick Reference
 
-- **Runtime Prerequisites**: <FILL: each runtime this project needs and its minimum version>
+- **Runtime Prerequisites**: Python 3.10+ (standard library only); git on PATH (the `git` check needs it)
 - **Canonical Regression Shield Gate**:
   ```bash
-  <FILL: the command that runs the whole test suite from this project root>
+  python -m unittest discover
   ```
 
 ### 🛠️ AIKit Commands (run from the AIKit folder)
@@ -23,18 +23,32 @@ Local-first capability probe: a falsifiable CLI that runs an inspectable battery
 ## 📦 What's Inside
 
 ```text
-probe/
+probe/                        <- root
 ├── .gitattributes            <- LF line endings on every platform
-├── .gitignore                <- transient AIKit state excluded
+├── .gitignore                <- transient state excluded, including reports/
 ├── LICENSE                   <- Aegean License 1.1 (AL-1.1): free personal use
 ├── COMMERCIAL.md             <- Commercial licensing terms
 ├── LICENSES/                 <- REUSE license texts
 ├── REUSE.toml                <- Machine-readable SPDX metadata
 ├── README.md
-├── inventory.py              <- AI-compat inventory: kind|name|locator lines (ADR-315)
+├── probe.py                  <- the capability-probe CLI (`python probe.py run [--deep]`)
 ├── demo.py                   <- AI-compat scripted drive: WORLD-DELTA lines (ADR-315)
+├── inventory.py              <- AI-compat inventory: kind|name|locator lines (ADR-315)
+├── tests/
+│   ├── test_probe.py         <- unit tests for the pure functions and checks
+│   └── test_probe_cli.py     <- integ tests: the CLI runs the battery end-to-end
 └── .aikit/                   <- this project's memory: record, ledger, decisions
 ```
+
+## 🧪 Running the Probe
+
+```bash
+python probe.py checks        # list the check ids and what each measures
+python probe.py run           # fs, shell, git, imports; exit 0 when all pass
+python probe.py run --deep    # adds timing and web (the web check fetches the profile page by default)
+```
+
+Every check returns a `CheckResult` whose evidence names what was observed: a report claims a check passed only when the observation supports it. Reports land in `reports/probe-report-<UTC stamp>.json`; `--out FILE` overrides the path, `--json` prints the report instead of the table.
 
 ## 📜 License
 

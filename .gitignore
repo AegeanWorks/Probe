@@ -8,3 +8,6 @@
 __pycache__/
 *.py[cod]
 node_modules/
+
+# Runtime output of `python probe.py run`
+reports/

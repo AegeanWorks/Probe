@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "name": "probe",
-  "test_command": null,
+  "test_command": "python -m unittest discover",
   "topics": [
     "aikit",
     "aikit-integrated",
@@ -21,5 +21,10 @@
   "python_min": null,
   "scratch_paths": [],
   "gate_outputs": [],
-  "created": "2026-11-19"
+  "created": "2026-11-19",
+  "has_ui": false,
+  "ui_kind": "library",
+  "ui_evidence": [],
+  "ui_checked_at": "2026-11-19",
+  "ui_source": "detected"
 }
