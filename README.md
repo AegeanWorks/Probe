@@ -31,6 +31,7 @@ probe/                        <- root
 ├── LICENSES/                 <- REUSE license texts
 ├── REUSE.toml                <- Machine-readable SPDX metadata
 ├── README.md
+├── assets/
 ├── probe.py                  <- the capability-probe CLI (`python probe.py run [--deep]`)
 ├── demo.py                   <- AI-compat scripted drive: WORLD-DELTA lines (ADR-315)
 ├── inventory.py              <- AI-compat inventory: kind|name|locator lines (ADR-315)
