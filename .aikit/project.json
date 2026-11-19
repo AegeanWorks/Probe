@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "name": "probe",
+  "test_command": null,
+  "topics": [
+    "aikit",
+    "aikit-integrated",
+    "source-available",
+    "aegean-license",
+    "commercial-license",
+    "probe",
+    "environment",
+    "testing"
+  ],
+  "gates": {},
+  "ui_required": false,
+  "map_coverage": "skip",
+  "review_required": false,
+  "mechanics_required": false,
+  "test_budget_ms": null,
+  "python_min": null,
+  "scratch_paths": [],
+  "gate_outputs": [],
+  "created": "2026-11-19"
+}
